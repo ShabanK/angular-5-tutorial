@@ -1,4 +1,12 @@
 <app-card
+  *ngFor="let post of posts"
+  [title]="post.title"
+  [imageURL]="post.imageURL"
+  [username]="post.username"
+  [content]="post.content"
+></app-card>
+
+<!-- <app-card
   [title]="posts[0].title"
   [imageURL]="posts[0].imageURL"
   [username]="posts[0].username"
@@ -15,4 +23,4 @@
   [imageURL]="posts[2].imageURL"
   [username]="posts[2].username"
   [content]="posts[2].content"
-></app-card>
+></app-card> -->
