@@ -16,7 +16,7 @@ export class AppComponent {
 
   constructor(){}
 
-  onChangeGetLength(length:string){
+  onChangeLength(length:string){
     const parsedValue = parseInt(length)
     if (!isNaN(parsedValue)){
       this.passwordLength=parsedValue
