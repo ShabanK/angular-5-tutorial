@@ -7,12 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  text: string;
-  translatedText: string;
-  constructor(){}
-
-  submit(){
-    
-  }
-
+  posts=[
+    {
+      title:"Neat Tree",
+      imageURL:"assets/tree.jpeg",
+      username: "nature",
+      content:"I saw a neat tree today."
+    },
+    {
+      title:"Big Mountain",
+      imageURL:"assets/mountain.jpeg",
+      username: "mountainlover",
+      content:"It do be snowing tho"
+    },
+    {
+      title:"Mountain Biking",
+      imageURL:"assets/biking.jpeg",
+      username: "bikingisrad",
+      content:"I did some biking today"
+    },
+  ]
 }
