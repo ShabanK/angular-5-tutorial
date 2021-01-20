@@ -1,0 +1,9 @@
+.success{
+    color: green
+}
+.bad{
+    color: red;
+}
+.pending{
+    color:grey
+}
