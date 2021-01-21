@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { ClassDirective } from './directives/class.directive';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ClassDirective
   ],
   imports: [
     BrowserModule
