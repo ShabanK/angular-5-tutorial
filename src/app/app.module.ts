@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { ConvertPipe } from './pipes/convert.pipe';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ConvertPipe
   ],
   imports: [
     BrowserModule
