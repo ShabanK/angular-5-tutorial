@@ -1,2 +1,50 @@
-<p>HELLO</p>
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li 
+            [ngClass]="{disabled:currentPage===0}"
+            class="page-item"
+        >
+            <a 
+                class="page-link"
+                (click)="currentPage=currentPage-1"
+            >Prev</a>
+        </li>
+        <ng-container *ngFor="let image of images; let i = index">
+            <li 
+                class="page-item" 
+                [ngClass]="{ active: i===currentPage }"
+                (click)="currentPage=i"
+                *ngIf="showPage(i)"
+            >
+                <a class="page-link" href="#" aria-label="Next">{{i+1}}
+                </a>
+            </li>
+        </ng-container>
+      <li 
+            [ngClass]="{disabled:currentPage===images.length-1}"
+            class="page-item"
+        >
+        <a 
+            class="page-link"
+            (click)="currentPage=currentPage+1"
 
+        >Next</a>
+        </li>
+      </ul>
+</nav>
+
+<div>
+    <h4>{{images[currentPage].title}}</h4>
+    <img [src]="images[currentPage].url" />
+</div>
+      <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Next</span>
+        </a>
+      </li>
+    </ul>
+  </nav> -->
